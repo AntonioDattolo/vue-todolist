@@ -10,7 +10,12 @@
     <title>#####</title>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <ul>
+            <li v-for="option, i in toDo" :v-model="do_it(i)" >{{option.title}}</li>
+        </ul>
+        <input type="text">
+    </div>
     <script src="./js/main.js"></script>
 </body>
 </html>
