@@ -12,9 +12,13 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="option, i in toDo" :v-model="do_it(i)" >{{option.title}}</li>
+            <li v-for="option, i in toDo"  >{{option.title}} <i class="fa-regular fa-circle-xmark" @click="remove(i)"></i></li>
+            <li v-for="option, i in add_do">{{add_do[i]}} <i class="fa-regular fa-circle-xmark" @click="remove(add_do[i])"></i></li>
         </ul>
-        <input type="text">
+        <input type="text" placeholder="Aggiungi cose da fare" v-model="add" ><button @click="add_do_func(add)" >aggiungi</button>
+
+        
+        
     </div>
     <script src="./js/main.js"></script>
 </body>

@@ -1,9 +1,9 @@
 const { createApp } = Vue
 
 const myConfig = {
-	
+
 	data() {
-		
+
 		return {
 			toDo : [
 				{
@@ -26,15 +26,35 @@ const myConfig = {
 					title: 'Dare da mangiare a Pixel',
 					result: false,
 				}
-			]
+			
+			],
+			add : null,
+			add_do :[]
 		}
+
 	},
 	methods: {
 		do_it(index){
-			done = this.toDo[index].result
-			return done
+		 	done = this.toDo[index].result
+		 	return done
+
+		},
+		add_do_func(item){
+			this.add_do.push(item)
+			console.log(this.add_do)
+			return item
+		},
+		remove(x){
+				this.toDo.splice(x,1)
 		}
 		
+			
+			
+			
+
+
+		
+
 	}
 };
 
