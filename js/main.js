@@ -8,53 +8,41 @@ const myConfig = {
 			toDo : [
 				{
 					title: 'fare la spesa',
-					result: false,
+					done: false,
 				},
 				{
 					title: 'Aggiornare pc',
-					result: false,
+					done: false,
 				},
 				{
 					title: 'Andare in palestra',
-					result: false,
+					done: false,
 				},
 				{
 					title: 'Mettere la lavatrice',
-					result: false,
+					done: false,
 				},
 				{
 					title: 'Dare da mangiare a Pixel',
-					result: false,
+					done: false,
 				}
 			
 			],
 			add : null,
-			add_do :[]
 		}
 
 	},
 	methods: {
 		do_it(index){
-		 	done = this.toDo[index].result
+		 	done = this.toDo[index].done
 		 	return done
-
 		},
 		add_do_func(item){
-			this.add_do.push(item)
-			console.log(this.add_do)
-			return item
+			this.toDo.push( new Object({title: item, done :false}))
 		},
 		remove(x){
 				this.toDo.splice(x,1)
 		}
-		
-			
-			
-			
-
-
-		
-
 	}
 };
 
