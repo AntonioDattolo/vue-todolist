@@ -29,6 +29,8 @@ const myConfig = {
 			
 			],
 			add : null,
+			check : null
+			
 		}
 
 	},
@@ -41,8 +43,15 @@ const myConfig = {
 			this.toDo.push( new Object({title: item, done :false}))
 		},
 		remove(x){
-				this.toDo.splice(x,1)
-		}
+			this.toDo.splice(x,1)
+		},
+		checked(){
+			if(this.check == true){
+				return "green"
+			}else{
+				return "red"
+			}
+		},
 	}
 };
 
