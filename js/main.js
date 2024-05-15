@@ -7,8 +7,8 @@ const myConfig = {
 		return {
 			toDo : [
 				{
-					title: 'fare la spesa',
-					done: false,
+					title: 'Fare la spesa',
+					done: true,
 				},
 				{
 					title: 'Aggiornare pc',
@@ -20,7 +20,7 @@ const myConfig = {
 				},
 				{
 					title: 'Mettere la lavatrice',
-					done: false,
+					done: true,
 				},
 				{
 					title: 'Dare da mangiare a Pixel',
@@ -29,8 +29,6 @@ const myConfig = {
 			
 			],
 			add : null,
-			check : null
-			
 		}
 
 	},
@@ -41,12 +39,13 @@ const myConfig = {
 		},
 		add_do_func(item){
 			this.toDo.push( new Object({title: item, done :false}))
+
 		},
 		remove(x){
 			this.toDo.splice(x,1)
 		},
-		checked(){
-			if(this.check == true){
+		checked(item){
+			if(item == true){
 				return "green"
 			}else{
 				return "red"

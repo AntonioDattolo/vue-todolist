@@ -1,7 +1,14 @@
 i{
     color: red;
+    font-size: 30px;
 }
-
+.myCheck{
+    height: 25px;
+    width: 25px;
+}
+.myBg{
+    background-color: rgb(28, 28, 28);
+}
 .green{
     color :green;
 }
