@@ -35,9 +35,10 @@ const myConfig = {
 	methods: {
 		add_do_func(item){
 			this.toDo.push( new Object({title: item, done :false}))
+			this.add = ""
 		},
-		remove(x){
-			this.toDo.splice(x,1)
+		remove(item){
+			this.toDo.splice(item,1)
 		},
 		checked(item){
 			return (item == true) ? "green" : "red"

@@ -16,7 +16,7 @@
                 <h1 class="text-white ">ToDoList</h1>
             </header>
             <section class="container my-3 text-center p-4">
-                <div class="border rounded border-light-subtle p-3" style="--bs-border-opacity: .4;">
+                <div class="border rounded border-light-subtle p-3">
                     <ul class="text-start">
                         <li class="" v-for="option, i in toDo" :class="checked(option.done)">
                             <h3 class="d-inline mx-2">
@@ -24,10 +24,10 @@
                             </h3>
                             <input class="myCheck mx-2" type="checkbox" :name="i" :value="option.done" v-model="option.done">
                             <!-- <input type="radio" :name="i" :value="option.done" v-model="check" >   -->
-                            <i class="fa-regular fa-circle-xmark mx-2 " @click="remove(i)"></i>
+                            <i class="fa-regular fa-circle-xmark mx-2" @click="remove(i)"></i>
                         </li>
                     </ul>
-                    <input class="w-50 mx-2" type="text" id="aka" placeholder="Aggiungi cose da fare" value=" " v-model="add">
+                    <input class="w-50 mx-2" type="text" placeholder="Aggiungi cose da fare" value="" v-model="add">
                     <button class="btn btn-outline-success" @click="add_do_func(add) ">Aggiungi</button>
                 </div>
             </section>

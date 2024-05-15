@@ -1,6 +1,6 @@
 i{
     color: red;
-    font-size: 30px;
+    font-size: 21px;
 }
 .myCheck{
     height: 25px;
@@ -15,3 +15,7 @@ i{
 .red{
     color:red;
 }
+.border{
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
