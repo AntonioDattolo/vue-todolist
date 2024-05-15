@@ -33,23 +33,14 @@ const myConfig = {
 
 	},
 	methods: {
-		do_it(index){
-		 	done = this.toDo[index].done
-		 	return done
-		},
 		add_do_func(item){
 			this.toDo.push( new Object({title: item, done :false}))
-
 		},
 		remove(x){
 			this.toDo.splice(x,1)
 		},
 		checked(item){
-			if(item == true){
-				return "green"
-			}else{
-				return "red"
-			}
+			return (item == true) ? "green" : "red"
 		},
 	}
 };
